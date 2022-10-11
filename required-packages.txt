@@ -1,0 +1,14 @@
+babel
+calc
+enumitem
+etoolbox
+fontspec
+footmisc
+geometry
+graphicx
+hyperref
+parskip
+plex-otf
+titlesec
+url
+xcolor
