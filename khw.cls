@@ -193,8 +193,8 @@
 
 \titleformat{\section}%
     {\sffamily \fontsize{25pt}{25pt} \selectfont}{}{0pt}%
-    {\textcolor{khwaccent}{\firstword #1\relax}
-     \textcolor{khwdark}{\notfirstword #1\relax}}
+    {\textcolor{khwaccent}{\firstword #1 \relax}
+     \textcolor{khwdark}{\notfirstword #1 \relax}}
 
 \titleformat{\subsection}%
     {\sffamily \fontsize{19pt}{19pt} \selectfont}{}{0pt}%
