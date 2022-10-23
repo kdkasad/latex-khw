@@ -14,7 +14,16 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{khw}[2022-10-07 Kian's Homework Assignment Class]
 
+% For e-TeX features
+\RequirePackage{etoolbox}
+
 %% PROCESS OPTIONS %%
+
+% Whether the 'code' option is given
+\newbool{khw@code}
+
+% Load minted package when 'code' option is given
+\DeclareOption{code}{\booltrue{khw@code}}
 
 % Pass unknown options to article base class
 \DeclareOption*{%
@@ -78,9 +87,6 @@
 % For footnote formatting
 \RequirePackage[bottom]{footmisc}
 
-% For e-TeX features
-\RequirePackage{etoolbox}
-
 % English language
 \RequirePackage[english]{babel}
 
@@ -93,6 +99,12 @@
 % For images/graphics
 \RequirePackage{graphicx}
 \graphicspath{{img/}}
+
+% For code syntax highlighting
+\ifbool{khw@code}{
+    \RequirePackage{minted}
+    \usemintedstyle{arduino}
+}{}
 
 % Change list spacing
 \RequirePackage{enumitem}
