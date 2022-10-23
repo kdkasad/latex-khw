@@ -98,6 +98,9 @@
 \RequirePackage{enumitem}
 \setlist{nosep}
 
+% Smaller image captions
+\usepackage[font=small,skip=0pt]{caption}
+
 % We don't want paragraphs to indent, but we do want \indent to work
 %\newlength{\tindent}
 %\setlength{\tindent}{\parindent}
