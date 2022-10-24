@@ -150,7 +150,7 @@
 %     \hypersetup{pdfauthor={#1}}
 % }
 
-\renewcommand{\maketitle}{
+\newcommand{\maketitlepage}{
     \thispagestyle{empty}
     \pagecolor{khwaccent}
     \color{white}
@@ -176,6 +176,41 @@
 	\clearpage
     % Reset colors for rest of document
     \nopagecolor \color{khwmain}
+}
+
+\renewcommand{\maketitle}{
+    \vspace*{1ex}
+    \begingroup
+    \raggedright
+    \hyphenpenalty=10000
+
+    { \sffamily \fontsize{48pt}{48pt}\selectfont
+      \textcolor{khwaccent}{\@titleA}
+      \textcolor{khwdark}{\@titleB} }
+    
+    \ifdefempty{\@subtitle}{}{ {
+        \sffamily \Large
+        \textcolor{khwlight}{\@subtitle}
+    } }
+
+    \vspace{0.5cm}
+    \hrule
+    \vspace{0.3cm}
+
+    { \hfill
+      \parbox{0.5\textwidth - 1ex}{\@author{}}%
+      \parbox{0.5\textwidth - 1ex}{
+        \raggedleft
+        \@course{} --- \@instructor{}
+      }
+      \hfill
+    }
+
+    \vspace{0.5cm}
+    \hrule
+
+    \endgroup
+    \vspace{1.5cm}
 }
 
 % Parbox with depth problem fixed
