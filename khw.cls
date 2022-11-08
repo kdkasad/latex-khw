@@ -210,7 +210,6 @@
     \hrule
 
     \endgroup
-    \vspace{1.5cm}
 }
 
 % Parbox with depth problem fixed
