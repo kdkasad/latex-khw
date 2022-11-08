@@ -144,11 +144,11 @@
 }
 
 % Author
-% \renewcommand{\@author}{\ClassError{khw}{\noexpand\author{...} not specified}{}}
-% \renewcommand{\author}[1]{
-%     \renewcommand{\@author}{#1}
-%     \hypersetup{pdfauthor={#1}}
-% }
+\renewcommand{\@author}{\ClassError{khw}{\noexpand\author{...} not specified}{}}
+\renewcommand{\author}[1]{
+    \renewcommand{\@author}{#1}
+    \hypersetup{pdfauthor={#1}}
+}
 
 \newcommand{\maketitlepage}{
     \thispagestyle{empty}
